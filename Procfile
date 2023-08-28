@@ -1,0 +1,1 @@
+web: gunicorn balanco_projeto.wsgi --log-file -
