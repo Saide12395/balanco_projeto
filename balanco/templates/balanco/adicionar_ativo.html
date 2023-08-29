@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Ativo</title>
+</head>
+<body>
+    <h1>Adicionar Ativo</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ ativo_form.as_p }}
+        <button type="submit">Adicionar Ativo</button>
+    </form>
+
+    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+</body>
+</html>

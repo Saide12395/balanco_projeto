@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Passivo</title>
+</head>
+<body>
+    <h1>Adicionar Passivo</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ passivo_form.as_p }}
+        <button type="submit">Adicionar Passivo</button>
+    </form>
+
+    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Ativos</title>
+</head>
+<body>
+    <h1>Lista de Ativos</h1>
+
+    <ul>
+        {% for ativo in ativos %}
+            <li>{{ ativo.nome }}: ${{ ativo.valor }}</li>
+        {% empty %}
+            <li>Nenhum ativo encontrado.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+</body>
+</html>

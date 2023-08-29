@@ -10,27 +10,36 @@ def balanco_patrimonial(request):
     total_passivos = sum(passivo.valor for passivo in passivos)
     patrimonio_liquido = total_ativos - total_passivos
     
-    if request.method == 'POST':
-        ativo_form = AtivoForm(request.POST)
-        passivo_form = PassivoForm(request.POST)
-        
-        if ativo_form.is_valid():
-            ativo_form.save()
-            return redirect('balanco_patrimonial')
-        
-        if passivo_form.is_valid():
-            passivo_form.save()
-            return redirect('balanco_patrimonial')
-    else:
-        ativo_form = AtivoForm()
-        passivo_form = PassivoForm()
-    
     return render(request, 'balanco/balanco.html', {
-        'ativos': ativos,
-        'passivos': passivos,
         'total_ativos': total_ativos,
         'total_passivos': total_passivos,
         'patrimonio_liquido': patrimonio_liquido,
-        'ativo_form': ativo_form,
-        'passivo_form': passivo_form,
     })
+
+def ativos_listagem(request):
+    ativos = Ativo.objects.all()
+    return render(request, 'balanco/ativos_listagem.html', {'ativos': ativos})
+
+def passivos_listagem(request):
+    passivos = Passivo.objects.all()
+    return render(request, 'balanco/passivos_listagem.html', {'passivos': passivos})
+
+def adicionar_ativo(request):
+    if request.method == 'POST':
+        ativo_form = AtivoForm(request.POST)
+        if ativo_form.is_valid():
+            ativo_form.save()
+            return redirect('ativos_listagem')
+    else:
+        ativo_form = AtivoForm()
+    return render(request, 'balanco/adicionar_ativo.html', {'ativo_form': ativo_form})
+
+def adicionar_passivo(request):
+    if request.method == 'POST':
+        passivo_form = PassivoForm(request.POST)
+        if passivo_form.is_valid():
+            passivo_form.save()
+            return redirect('passivos_listagem')
+    else:
+        passivo_form = PassivoForm()
+    return render(request, 'balanco/adicionar_passivo.html', {'passivo_form': passivo_form})
