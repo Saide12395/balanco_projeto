@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Apagar Ativo</title>
+    <title>Apagar Passivo</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Apagar Ativo</h1>
+    <h1>Apagar Passivo</h1>
 
-    <p>Tem certeza de que deseja apagar o ativo "{{ ativo.nome }}"?</p>
+    <p>Você tem certeza que deseja apagar o passivo "{{ passivo.nome }}"?</p>
 
     <form method="post">
         {% csrf_token %}
         <button type="submit">Apagar</button>
     </form>
 
-    <a href="{% url 'ativos_listagem' %}">Cancelar</a>
+    <a href="{% url 'passivos_listagem' %}">Voltar à Lista de Passivos</a>
 </body>
 </html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balanço Patrimonial</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Balanço Patrimonial</h1>
+
+        <h2 class="section-title">Total Ativos: {{ total_ativos }} MT</h2>
+        <h2 class="section-title">Total Passivos: {{ total_passivos }} MT</h2>
+        <h2 class="section-title">Patrimônio Líquido: {{ patrimonio_liquido }} MT</h2>
+
+        <a href="{% url 'ativos_listagem' %}" class="link">Visualizar Todos Ativos</a>
+        <a href="{% url 'passivos_listagem' %}" class="link">Visualizar Todos Passivos</a>
+        <a href="{% url 'adicionar_ativo' %}" class="link">Adicionar Ativo</a>
+        <a href="{% url 'adicionar_passivo' %}" class="link">Adicionar Passivo</a>
+    </div>
+</body>
+</html>

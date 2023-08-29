@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Lista de Ativos</title>
+    <link rel="stylesheet" href="{% static 'css/styleViews.css' %}">
 </head>
 <body>
     <h1>Lista de Ativos</h1>
@@ -11,12 +13,12 @@
     <p>
         {{ ativo.nome }} -  {{ ativo.valor }} MT
         <a href="{% url 'editar_ativo' ativo.id %}">Editar</a>
-        <a href="{% url 'apagar_ativo' ativo.id %}">Apagar</a>
+        <a id="apagar" href="{% url 'apagar_ativo' ativo.id %}">Apagar</a>
     </p>
 {% endfor %}
 
     </ul>
 
-    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+    <a id="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
 </body>
 </html>

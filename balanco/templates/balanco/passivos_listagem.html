@@ -1,19 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Lista de Passivos</title>
+    <link rel="stylesheet" href="{% static 'css/styleViews.css' %}">
 </head>
 <body>
     <h1>Lista de Passivos</h1>
 
     <ul>
         {% for passivo in passivos %}
-    <p>
-        {{ passivo.nome }} - {{ passivo.valor }} MT
-        <a href="{% url 'editar_passivo' passivo.id %}">Editar</a>
-        <a href="{% url 'apagar_passivo' passivo.id %}">Apagar</a>
-    </p>
-{% endfor %}
+        <p>
+            {{ passivo.nome }} - R$ {{ passivo.valor }}
+            <a href="{% url 'editar_passivo' passivo.id %}">Editar</a>
+            <a id="apagar" href="{% url 'apagar_passivo' passivo.id %}">Apagar</a>
+        </p>
+    {% endfor %}
 
     </ul>
 

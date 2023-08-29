@@ -1,17 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Adicionar Ativo</title>
+    <link rel="stylesheet" href="{% static 'css/styleAddActivo.css' %}">
 </head>
 <body>
-    <h1>Adicionar Ativo</h1>
+    <div class="container">
+        <h1 class="title">Adicionar Ativo</h1>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ ativo_form.as_p }}
-        <button type="submit">Adicionar Ativo</button>
-    </form>
+        <form method="post" class="form">
+            {% csrf_token %}
+            {{ ativo_form.as_p }}
+            <button type="submit" class="btn">Adicionar Ativo</button>
+        </form>
 
-    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+        <a href="{% url 'balanco_patrimonial' %}" class="link">Voltar ao Balanço Patrimonial</a>
+    </div>
 </body>
 </html>
+

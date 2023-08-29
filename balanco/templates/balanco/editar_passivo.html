@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Passivo</title>
+</head>
+<body>
+    <h1>Editar Passivo</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ passivo_form.as_p }}
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <a href="{% url 'passivos_listagem' %}">Voltar à Lista de Passivos</a>
+</body>
+</html>
