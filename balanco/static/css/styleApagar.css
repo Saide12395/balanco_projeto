@@ -1,0 +1,51 @@
+/* Resto do seu CSS... */
+
+.confirmation-box {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.message {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+}

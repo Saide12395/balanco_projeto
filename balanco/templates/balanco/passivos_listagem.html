@@ -11,7 +11,7 @@
     <ul>
         {% for passivo in passivos %}
         <p>
-            {{ passivo.nome }} - R$ {{ passivo.valor }}
+            {{ passivo.nome }} -  {{ passivo.valor }} MT
             <a href="{% url 'editar_passivo' passivo.id %}">Editar</a>
             <a id="apagar" href="{% url 'apagar_passivo' passivo.id %}">Apagar</a>
         </p>
@@ -19,6 +19,6 @@
 
     </ul>
 
-    <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+    <a id="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
 </body>
 </html>
