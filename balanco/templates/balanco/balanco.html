@@ -6,9 +6,9 @@
 <body>
     <h1>Balanço Patrimonial</h1>
 
-    <h2>Total Ativos: ${{ total_ativos }}</h2>
-    <h2>Total Passivos: ${{ total_passivos }}</h2>
-    <h2>Patrimônio Líquido: ${{ patrimonio_liquido }}</h2>
+    <h2>Total Ativos: {{ total_ativos }} MT</h2>
+    <h2>Total Passivos: {{ total_passivos }} MT</h2>
+    <h2>Patrimônio Líquido: {{ patrimonio_liquido }} MT</h2>
 
     <a href="{% url 'ativos_listagem' %}">Visualizar Todos Ativos</a>
     <a href="{% url 'passivos_listagem' %}">Visualizar Todos Passivos</a>

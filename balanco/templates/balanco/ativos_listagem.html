@@ -8,10 +8,13 @@
 
     <ul>
         {% for ativo in ativos %}
-            <li>{{ ativo.nome }}: ${{ ativo.valor }}</li>
-        {% empty %}
-            <li>Nenhum ativo encontrado.</li>
-        {% endfor %}
+    <p>
+        {{ ativo.nome }} -  {{ ativo.valor }} MT
+        <a href="{% url 'editar_ativo' ativo.id %}">Editar</a>
+        <a href="{% url 'apagar_ativo' ativo.id %}">Apagar</a>
+    </p>
+{% endfor %}
+
     </ul>
 
     <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>

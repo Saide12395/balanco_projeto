@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Ativo, Passivo
 from .forms import AtivoForm, PassivoForm
 
@@ -43,3 +43,25 @@ def adicionar_passivo(request):
     else:
         passivo_form = PassivoForm()
     return render(request, 'balanco/adicionar_passivo.html', {'passivo_form': passivo_form})
+#Editar
+def editar_ativo(request, ativo_id):
+    ativo = get_object_or_404(Ativo, pk=ativo_id)
+
+    if request.method == 'POST':
+        ativo_form = AtivoForm(request.POST, instance=ativo)
+        if ativo_form.is_valid():
+            ativo_form.save()
+            return redirect('ativos_listagem')
+    else:
+        ativo_form = AtivoForm(instance=ativo)
+    
+    return render(request, 'balanco/editar_ativo.html', {'ativo_form': ativo_form})
+#Apagar
+def apagar_ativo(request, ativo_id):
+    ativo = get_object_or_404(Ativo, pk=ativo_id)
+    if request.method == 'POST':
+        ativo.delete()
+        return redirect('ativos_listagem')
+    return render(request, 'balanco/apagar_ativo.html', {'ativo': ativo})
+
+

@@ -8,10 +8,13 @@
 
     <ul>
         {% for passivo in passivos %}
-            <li>{{ passivo.nome }}: ${{ passivo.valor }}</li>
-        {% empty %}
-            <li>Nenhum passivo encontrado.</li>
-        {% endfor %}
+    <p>
+        {{ passivo.nome }} - {{ passivo.valor }} MT
+        <a href="{% url 'editar_passivo' passivo.id %}">Editar</a>
+        <a href="{% url 'apagar_passivo' passivo.id %}">Apagar</a>
+    </p>
+{% endfor %}
+
     </ul>
 
     <a href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
