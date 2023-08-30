@@ -2,10 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Apagar Passivo</title>
     <link rel="stylesheet" href="{% static 'css/styleApagar.css' %}">
 </head>
 <body>
+
+    <div class="container">
     <h1>Apagar Passivo</h1>
 
     <p>Você tem certeza que deseja apagar o passivo "{{ passivo.nome }}"?</p>
@@ -15,6 +18,7 @@
         <button type="submit">Apagar</button>
     </form>
 
-    <a href="{% url 'passivos_listagem' %}">Voltar à Lista de Passivos</a>
+    <a id="vlp" href="{% url 'passivos_listagem' %}">Voltar à Lista de Passivos</a>
+</div>
 </body>
 </html>
