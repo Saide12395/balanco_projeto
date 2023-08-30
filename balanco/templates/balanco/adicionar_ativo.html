@@ -14,9 +14,13 @@
             {{ ativo_form.as_p }}
             <button type="submit" class="btn">Adicionar Ativo</button>
         </form>
-
-        <a href="{% url 'balanco_patrimonial' %}" class="link">Voltar ao Balanço Patrimonial</a>
+    <div class="botoes">
+        <a class="voltar" href="{% url 'balanco_patrimonial' %}"> Voltar ao Balanço Patrimonial</a>
+        <a class="voltar" href="{% url 'ativos_listagem' %}" > Visualizar Ativos</a>
+        <a class="voltar" href="{% url 'passivos_listagem' %}" >Visualizar Passivos</a>
+       
     </div>
+</div>  
 </body>
 </html>
 

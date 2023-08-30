@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="{% static 'css/styleViews.css' %}">
 </head>
 <body>
+    <div class="container">
     <h1>Lista de Ativos</h1>
-
     <ul>
         {% for ativo in ativos %}
     <p>
@@ -18,7 +18,11 @@
 {% endfor %}
 
     </ul>
-
-    <a id="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+<div class="botoes">
+    <a class="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+    <a class="voltar" href="{% url 'adicionar_ativo' %}" class="link">Adicionar Ativo</a>
+    <a class="voltar" href="{% url 'passivos_listagem' %}" class="link">Visualizar Passivos</a>
+</div>
+</div>
 </body>
 </html>

@@ -4,8 +4,8 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background: #979696;
+      border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -43,9 +43,25 @@ button:hover {
     background-color: #c82333;
 }
 
-.link {
+a {
+    background: #007bff;
+    padding: 16px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #007bff;
+    color: white;
+    margin-top: 10px;
+    border: none;
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f6f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

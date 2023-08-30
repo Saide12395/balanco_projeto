@@ -3,18 +3,19 @@
 <html>
 <head>
     <title>Apagar Ativo</title>
-    <link rel="stylesheet" href="{% static 'css/styleApagar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleViews.css' %}">
 </head>
 <body>
+    <div class="container">
     <h1>Apagar Ativo</h1>
 
     <p>Tem certeza de que deseja apagar o ativo "{{ ativo.nome }}"?</p>
 
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Apagar</button>
+        <a id="cancelar" href="{% url 'ativos_listagem' %}">Cancelar</a>
+        <button type="submit" id="apagar">Apagar</button>
     </form>
-
-    <a href="{% url 'ativos_listagem' %}">Cancelar</a>
+</div>
 </body>
 </html>

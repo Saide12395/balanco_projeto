@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{% static 'css/styleViews.css' %}">
 </head>
 <body>
+    <div class="container">
     <h1>Lista de Passivos</h1>
 
     <ul>
@@ -19,6 +20,12 @@
 
     </ul>
 
-    <a id="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+    <div class="botoes">
+        <a class="voltar" href="{% url 'balanco_patrimonial' %}">Voltar ao Balanço Patrimonial</a>
+        <a class="voltar" href="{% url 'adicionar_passivo' %}" class="link">Adicionar Passivo</a>
+        <a class="voltar" href="{% url 'ativos_listagem' %}" class="link">Visualizar Ativos</a>
+
+    </div>
+</div>
 </body>
 </html>

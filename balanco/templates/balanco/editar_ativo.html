@@ -3,17 +3,22 @@
 <html>
 <head>
     <title>Editar Ativo</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleAddActivo.css' %}">
 </head>
+<div class="container">
 <body>
     <h1>Editar Ativo</h1>
 
     <form method="post">
         {% csrf_token %}
         {{ ativo_form.as_p }}
-        <button type="submit">Salvar Alterações</button>
+        <div class="butt">
+        <button class="button" type="submit">Salvar Alterações</button>
+        <a class="button" href="{% url 'ativos_listagem' %}">Voltar à Lista de Ativos</a>
+         </div>
     </form>
 
-    <a href="{% url 'ativos_listagem' %}">Voltar à Lista de Ativos</a>
+   
+</div>
 </body>
 </html>

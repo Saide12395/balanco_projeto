@@ -27,9 +27,19 @@ body {
 }
 
 .link {
+    background: #007bff;
+    padding: 16px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #007bff;
+    color: white;
     margin-top: 10px;
+}
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

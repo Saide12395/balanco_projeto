@@ -12,10 +12,11 @@
         <form method="post" class="form">
             {% csrf_token %}
             {{ passivo_form.as_p }}
+            
             <button type="submit" class="btn">Adicionar Passivo</button>
         </form>
 
-        <a href="{% url 'balanco_patrimonial' %}" class="link">Voltar ao Balanço Patrimonial</a>
+        <a class="button" href="{% url 'balanco_patrimonial' %}" class="link">Voltar ao Balanço Patrimonial</a>
     </div>
 </body>
 </html>

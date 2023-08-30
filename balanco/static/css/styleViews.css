@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #adadad;
     margin: 0;
     padding: 0;
 }
@@ -12,13 +12,14 @@ body {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(178, 175, 175, 0.1);
 }
 
 .title {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 ul {
@@ -27,13 +28,16 @@ ul {
 }
 
 ul p {
-    margin: 10px 0;
+    color: #666;
+    margin-top: 26px;
+    font-weight: bold;
 }
 
 ul a {
     margin-left: 10px;
     text-decoration: none;
     color: #007bff;
+    margin-top: 20px;
 }
 
 .link {
@@ -54,21 +58,47 @@ ul a {
     border-radius: 5px;
     cursor: pointer;
 }
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 #apagar:hover {
     background-color: #c82333;
 }
-
-#voltar {
-    background-color: #007bff;
+#cancelar{
+    background-color: #31a374;
+    text-decoration: none;
     color: #fff;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    cursor: pointer;   
 }
 
-#voltar:hover {
+.voltar {
+    background: #007bff;
+    padding: 16px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.voltar:hover {
     background-color: #0056b3;
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f6f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
